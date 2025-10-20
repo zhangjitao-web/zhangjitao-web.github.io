@@ -2,78 +2,84 @@
 <html lang="EN">
 <head>
     <meta charset="UTF-8">
-    <title>个人简历</title>
+    <title>《个人简历》</title>
     <style>
-        table{width: 800px; height: 55px; text-align: center;border: 1px solid #889bf2;border-collapse: collapse;}
-    td,th{border: 1px solid #889bf2;}
-    th{height: 55px;background-color: #a3e8e2;color:#aaabbb;}
-    tr{background-color: #fcfcfe;color: rgb(153, 19, 64);}
-    .odd{background-color: #79106e;}
+        table{width: 800px; height: 100px; text-align: center;border: 2px solid #889bf2;border-collapse: collapse;}
+    caption{color: #000;}
+    td,th{border: 1.5px solid #889bf2;}
+    th{ width:150;height: 100px;background-color: #a3e8e2;color:#8b79e7;}
+    tr{background-color: #e5ecec;color: rgb(153, 19, 64);}
+    tr{background-color: #8b79e7;}
+    td{background-color: #e5ecec;}
+    .odd{background-color: #cec9cd;}
     .even{background-color: #b48b52;}
+    tbody{background-color: #8b79e7;}
+    ol{background-color: #ced3b2;color: #000;}
+    p{background-color: #adb7f5;}
+    ul{background-color: #d1f5ba;}
+
     </style>
 </head>
 <body>
     <table>
-        <caption>个人简历</caption>
+        <caption aria-colcount="1">《个人简历》</caption>
         <tr>
-            <th>姓名</th>
-            <th>张继涛</th>
-            <th>性别</th>
-            <th>男</th>
-            <th>头像</th>
-            <td>
-                <img src="../tou.jpg" width="220" height="220" alt="">
+            <th colspan="4">   姓名   </th>
+            <th colspan="4">张继涛(zhangjitao)</th>
+            <td rowspan="3" colspan="2">
+                <img src="../tou.jpg" width="330" height="300" alt="" >
             </td>
         </tr>
         <tr>
-            <th>学校</th>
-            <th>鲁东大学</th>
-            <th>出生日期</th>
+            <th colspan="2" >学校</th>
+            <th colspan="2">鲁东大学</th>
+            <th >出生日期</th>
             <th>2005.08.03</th>
-            <th>联系电话</th>
+            <th >联系方式</th>
             <th>88888888</th>
         </tr>
         <tr>
-            <th>地址</th>
-            <th>山东烟台</th>
+            <th colspan="2">地址</th>
+            <th colspan="2">山东烟台</th>
             <th>政治面貌</th>
             <th>共青团员</th>
-            <th>籍贯</th>
-            <th>山东聊城</th>
-        </tr>
-        <tr>
-        <th>技能证书</th>
-        <td colspan="5">
-            <ol type="1" start="1" >
-                <li>全国计算机等级考试（NCRE）二级</li>
-                <li>Python Institute PCEP 认证</li>
-                <li>CompTIA Security+</li>
-                <li>Microsoft Office Specialist（MOS）认证</li>
-            </ol>
-        </td>
-        </tr>
-        <tr>
-        <th>项目经历</th>
-        <td colspan="5">
-            <ul type="square">
-                <li>2025年软件杯大赛的本科组</li>
-            </ul>
-        </td>
-        </tr>
-        <tr>
-        <th>兴趣爱好</th>
-        <td colspan="5">
-            <ol type="A" start="A">
-                <li>编程相关</li>
-                <li>阅读与笔记</li>
-                <li>视觉设计</li>
-            </ol>
-        </td>
-        </tr>
-        <tr>
-        <th>自我评价</th>
-        <td colspan="5">
-            <p>作为软件工程专业新生，我对自身现阶段的状态有清晰认知。在专业兴趣上，我始终保持热情，
+            <th>邮箱</th>
+            <th>10086@qq.com</th>
+            </tr>
+        <tbody>
+            <tr>
+            <th colspan="4">技能证书</th>
+            <td colspan="7">
+                <ol type="1" start="1" >
+                    <li>全国计算机等级考试（NCRE）二级</li>
+                    <li>Python Institute PCEP 认证</li>
+                    <li>CompTIA Security+</li>
+                    <li>Microsoft Office Specialist（MOS）认证</li>
+                </ol>
+            </td>
+            </tr>
+            <tr>
+            <th colspan="4">项目经历</th>
+            <td colspan="7">
+                 <ul type="square">
+                    <li>2025年软件杯大赛的本科组</li>
+                </ul>
+            </td>
+            </tr>
+            <tr>
+            <th colspan="4">兴趣爱好</th>
+            <td colspan="7">
+                <ol type="A" start="A">
+                    <li>编程相关</li>
+                    <li>阅读与笔记</li>
+                    <li>视觉设计</li>
+                </ol>
+            </td>
+            </tr>
+            <tr>
+            <th colspan="4">自我评价</th>
+            <td colspan="7">
+                <p>作为软件工程专业新生，我对自身现阶段的状态有清晰认知。在专业兴趣上，我始终保持热情，
             高中自学 Python 基础并完成成绩统计小项目的经历，让我坚定了对编程的喜爱，进入大学后主动
             关注行业动态，不断加深对软件工程的理解。​<br>学习方面，我态度端正、主动性强。面对计算机
             基础、高等数学等课程，能紧跟课堂节奏，课后及时巩固知识，目前成绩稳定在良好水平。遇到难
@@ -81,8 +87,10 @@
             <br>不过，我也存在明显不足：专业知识体系尚未完善，编程实践经验较少，面对复杂问题时解决能力有待
             提升。后续我会制定明确计划，大一重点攻克 C 语言、Java 基础语法，多参与实践练习，逐步弥补短
             板，努力向合格的软件工程学习者靠近。​</p>
-        </td>
-        </tr>
+            </td>
+
+            </tr>
+        </tbody>
     </table>
     </body>
 </html>
