@@ -21,6 +21,17 @@
                 transform: translateX(0) scale(1);
             }
         }
+    @keyframes jump {
+            0% {
+                transform: translateY(0) scale(1);
+            }
+            50% {
+                transform: translateY(-8px) scale(1.05);
+            }
+            100% {
+                transform: translateY(0) scale(1);
+            }
+        }
 
     body {
     font-family: "华文新魏", sans-serif;
@@ -166,7 +177,11 @@
     margin-bottom: 1px;
      transition: all 0.3s;
 }
+.book-item img:hover{display: inline-block;
+            
+        animation: jump 0.5s ease;
 
+}
 .new-books {
     width: 100%;
     border-collapse: collapse; 
@@ -196,7 +211,7 @@
 }
 .new-books img:hover {display: inline-block;
             
-        animation: jumpRight 0.5s ease;}
+        animation: jump 0.5s ease;}
 
 .right-col {
     width: 260px;
@@ -215,6 +230,10 @@
 .right-col p{
     font-size: larger;
     margin-bottom: 40px;
+}
+.right-col p:hover{
+    display: block;
+     animation: jump 0.5s ease;
 }
 .promotion {
     margin-bottom: 20px;
@@ -261,6 +280,8 @@
                 <li><a href="#">传记</a></li>
                 <li><a href="#">科普</a></li>
                 <li><a href="#">历史</a></li>
+                <li><a href="#">编程</a></li>
+                <li><a href="#">军事</a></li>
             </ul>
         </aside>
         <section class="middle-col">
