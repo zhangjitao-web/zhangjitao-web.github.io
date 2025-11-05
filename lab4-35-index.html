@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>秋分数字展销平台</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+    * {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;}
+     @keyframes jumpRight {
+            0% {
+                transform: translateX(0) scale(1);
+            }
+            50% {
+                transform: translateX(8px) scale(1.05);
+            }
+            100% {
+                transform: translateX(0) scale(1);
+            }
+        }
+    @keyframes jump {
+            0% {
+                transform: translateY(0) scale(1);
+            }
+            50% {
+                transform: translateY(-4px) scale(1.05);
+            }
+            100% {
+                transform: translateY(0) scale(1);
+            }
+        }
+     @keyframes jumpstrong {
+        0% {
+                transform: translateY(0) scale(1);
+        }
+        50% {
+                transform: translateY(-10px) scale(1.3);
+        }
+        100% {
+                transform: translateY(0) scale(1);
+        }
+    }
+
+    body {
+    font-family: "华文新魏", sans-serif;
+    color: #5e0d0d;
+    background-color: #f8f9f2;
+    padding-top: 80px;
+    }
+    
+    b{
+        text-decoration: underline wavy #e70f0f;
+    }
+    .header {
+    width: 100%;
+    height: 100px;
+    background:linear-gradient(#f3bebe 0%,#cff5f8 100%);
+    border-bottom: 1.5px solid #83faf6;
+    padding: 0 25px;
+    }
+    .logo {
+    float: left; 
+    margin-top: 0px;
+    }
+    .logo img {
+    height: 100px;
+    }
+    .nav {
+    float: right; 
+    margin-top: 20px;
+    }
+    .nav ul li {
+    float: left;
+    margin-left: 25px;
+    position: relative;
+    
+    }
+    .nav ul li:hover{display: inline-block;
+            
+        animation: jumpRight 0.5s ease;
+
+    }
+    .nav ul li a {
+    text-decoration: none;
+    color: #060e06;
+    font-size: 30px;
+
+    cursor: pointer;}
+    .nav ul li a:hover {
+    color: #0066cc;
+    cursor: pointer;
+    display: inline-block;
+    animation: jumpRight 0.5s ease;
+
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
+}
+    
+
+
+
+
+    .container {
+    width: 1200px;
+    margin: 20px auto;
+    overflow: hidden; 
+    color: #d615f8;
+    
+    }
+    .left-col {
+    width: 200px;
+    float: left;
+    background: linear-gradient(#f3eed7 0%,#f7fad1 100%);
+    padding: 20px;
+    margin-right: 20px;
+    border: 1px solid #bddae1;
+    border-radius: 5px;
+    position: relative; 
+    top: 15px;
+    
+    }
+    .left-col h2 {
+    font-size: 35px;
+    margin-bottom: 70px;
+    color: #0066cc;
+    transition: all 0.3s;
+}
+ 
+
+
+.category {
+    list-style: none;
+}
+
+.category li {
+    margin-bottom: 25px;
+}
+
+.category li a {
+    text-decoration: none;
+    color: #cf1f1f;
+    cursor: pointer; 
+    font-size: xx-large;
+}
+
+.category li a:hover {
+    color: #ff6600;
+    cursor: pointer; 
+    display: block;
+    
+    animation: jumpRight 0.5s ease; 
+
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
+}
+
+
+
+
+.middle-col {
+    width: 700px;
+    float: left;
+    background:linear-gradient(#f3bebe 0%,#fff 30%) ;
+    padding: 20px;
+    margin-right: 20px;
+    border: 2px  solid  #f3bebe ;
+    border-radius: 2px;
+}
+
+.middle-col h2 {
+    font-size: 50px;
+    margin-bottom: 10px;
+    color: #7ba2ea;
+}
+
+.book-item {
+    width: 300px;
+    float: left; 
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1.5px solid #a2e0f1;
+    border-radius: 3px;
+    position: relative; 
+    overflow: hidden; 
+}
+
+.book-item h3{ 
+    font-size: x-large;
+}
+.book-item img {
+    width: 95%;
+    height: 220px;
+    object-fit: cover;
+    margin-bottom: 1px;
+     transition: all 0.3s;
+}
+
+.book-item img:hover {display: inline-block;
+            
+        animation: jump 0.5s ease;
+
+}
+.book-item img:hover .book-detail{
+    display: block;
+    opacity: 1;
+}
+.new-books {
+    width: 100%;
+    border-collapse: collapse; 
+}
+
+.new-books tr td em {
+    font-size: xx-large;
+}
+.new-books tr td {
+    border: 1.5px solid #a2e0f1;
+    padding: 10px;
+    text-align: center;
+    text-decoration: double;
+}
+.new-books tr td p{
+    font-size: x-large;
+    text-align: center;
+    background:linear-gradient(white 30%,#feed56 50%,white 70%);
+    margin: 0px;
+
+}
+.new-books img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    
+}
+.new-books img:hover {display: inline-block;
+            
+        animation: jump 0.5s ease;}
+
+.right-col {
+    width: 260px;
+    float: left;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.right-col h2 {
+    font-size: 50px;
+    margin-bottom: 70px;
+    color: #0066cc;
+}
+.right-col p{
+    font-size: larger;
+    margin-bottom: 40px;
+}
+.right-col p:hover{
+    display: block;
+     animation: jumpstrong 0.5s ease;
+}
+.promotion {
+    margin-bottom: 20px;
+    border-bottom: #5e0d0d;
+}
+.promotion h5{text-align: center;
+    color: #ef2b2b;
+    font-weight: 900;
+    font-size: x-large;
+
+}
+
+.promotion p {
+    text-align: center;
+    color: #ff6600;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+    /* 任务4新增1：导航栏固定定位（固定在顶部，避免滚动遮挡） */
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999; /* 层级最高，确保不被其他元素遮挡 */
+    }
+    /* 调整body的padding-top，匹配header高度（原有80px改为100px） */
+    body {
+        padding-top: 100px;
+    }
+
+    /* 任务4新增2：下拉菜单样式（相对+绝对定位+显示隐藏） */
+    /* 下拉菜单父容器：保持相对定位，作为子菜单的定位参考 */
+    .nav ul li.dropdown {
+        position: relative;
+    }
+    /* 下拉菜单子容器：绝对定位+默认隐藏 */
+    .dropdown-menu {
+        position: absolute;
+        top: 100%; /* 定位在父元素底部 */
+        left: 0;
+        width: 150px;
+        background-color: #fff;
+        border: 1px solid #a2e0f1;
+        border-radius: 0 0 5px 5px;
+        box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+        z-index: 1000; /* 层级高于导航栏，避免被遮挡 */
+        display: none; /* 默认隐藏 */
+        list-style: none; /* 清除列表默认样式 */
+    }
+    /* 下拉菜单项样式：取消浮动，垂直排列 */
+    .dropdown-menu li {
+        float: none;
+        margin: 0;
+        padding: 5px 0;
+    }
+    .dropdown-menu li a {
+        display: block;
+        padding: 5px 15px;
+        font-size: 20px; /* 调整子菜单文字大小，避免过大 */
+    }
+    /* 交互：鼠标悬停父项时，显示下拉菜单 */
+    .nav ul li.dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    /* 任务4新增3：图书详情显示隐藏+透明度效果 */
+    .book-detail {
+        position: absolute; /* 基于.book-item绝对定位 */
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 10px;
+        background-color: rgba(0,0,0,0.7); /* 半透明黑色背景（透明度70%） */
+        color: #fff; /* 文字白色，提升可读性 */
+        font-size: 14px;
+        display: none; /* 默认隐藏 */
+        opacity: 0; /* 初始透明度0，配合过渡动画 */
+        transition: opacity 0.3s ease; /* 透明度过渡，效果更流畅 */
+    }
+    /* 交互：鼠标悬停图书卡片时，显示详情并设置透明度为1 */
+    .book-item:hover .book-detail {
+        display: block;
+        opacity: 1;
+    }
+
+    /* 任务4新增4：半透明遮罩层（固定定位+透明度，用于层级示例） */
+    .mask {
+        position: fixed; /* 固定定位，覆盖全屏 */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.5); /* 半透明黑色（透明度50%） */
+        z-index: 998; /* 层级：在导航栏（999）下方，内容上方 */
+        display: none; /* 默认隐藏，可通过JS触发（示例用） */
+    }
+
+    /* 任务4新增5：下拉菜单项hover优化，避免与父项动画冲突 */
+    .dropdown-menu li a:hover {
+        background-color: #f3bebe;
+        color: #5e0d0d;
+        animation: none; /* 取消子菜单文字跳动，避免视觉混乱 */
+        box-shadow: none; /* 取消子菜单阴影，保持简洁 */
+    }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="../logo.png" alt="秋分平台Logo">
+        </div>
+        <nav class="nav">
+            <ul>
+                <!-- 任务4新增：给「图书分类」添加下拉菜单结构，新增class="dropdown" -->
+                <li class="dropdown">
+                    <a href="#">图书分类</a>
+                    <!-- 任务4新增：下拉菜单选项列表 -->
+                    <ul class="dropdown-menu">
+                        <li><a href="#">小说</a></li>
+                        <li><a href="#">传记</a></li>
+                        <li><a href="#">科普</a></li>
+                        <li><a href="#">历史</a></li>
+                        <li><a href="#">编程</a></li>
+                        <li><a href="#">军事</a></li>
+                    </ul>
+                </li>
+                <!-- 原有导航项：不修改 -->
+                <li><a href="#">促销信息</a></li>
+                <li><a href="#">热门推荐</a></li>
+                <li><a href="#">新书上市</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 任务4新增：半透明遮罩层（默认隐藏，用于透明度和层级示例） -->
+    <div class="mask"></div>
+
+    <main class="container">
+        <aside class="left-col">
+            <h2>图书分类</h2>
+            <ul class="category">
+                <li><a href="#">小说</a></li>
+                <li><a href="#">传记</a></li>
+                <li><a href="#">科普</a></li>
+                <li><a href="#">历史</a></li>
+                <li><a href="#">编程</a></li>
+                <li><a href="#">军事</a></li>
+            </ul>
+        </aside>
+
+        <section class="middle-col">
+            <h2>热门推荐</h2>
+            <div class="book-item">
+                <img src="../ruanjiangongchengdaolun.jpg" alt="热门图书1">
+                <!-- 任务4新增：图书详情内容（默认隐藏，hover显示） -->
+                <div class="book-detail">
+                    <h4>作者：李洪波</h4>
+                    <p>出版社：清华大学出版社</p>
+                    
+                </div>
+                <h3><em>书名：《软件工程导论》</em></h3>
+                <p><b>价格：¥59.00元</b></p>
+            </div>
+            <div class="book-item">
+                <img src="../Linux.jpg" alt="热门图书2">
+                <!-- 任务4新增：图书详情内容（默认隐藏，hover显示） -->
+                <div class="book-detail">
+                    <h4>作者：曲海平</h4>
+                    <p>出版社：清华大学出版社</p>
+                    
+                </div>
+                <h3><em>书名：《Linux应用与实训教程》</em></h3>
+                <p><b>价格：¥45.00元</b></p>
+            </div>
+
+            <h2>新书上市</h2>
+            <table class="new-books">
+                <tr class="head">
+                    <td><p>图片</p></td>
+                    <td><p>书名</p></td>
+                    <td><p>价格（/元）</p></td>
+                </tr>
+                <tr>
+                    <td><img src="../chengxushejijichu.jpg" alt="新书1"></td>
+                    <td><strong><em>《程序设计基础》</em></strong></td>
+                    <td><b>68.00</b></td>
+                </tr>
+                <tr>
+                    <td><img src="../sadantange.jpg" alt="新书2"></td>
+                    <td><strong><em>《撒旦探戈》</em></strong></td>
+                    <td><b>92.00</b></td>
+                </tr>
+            </table>
+        </section>
+
+        <aside class="right-col">
+            <h2>促销信息</h2>
+            <div class="promotion">
+                <h5>全场惊喜大折扣</h5>
+                <p>低至五折</p>
+            </div>
+            <div class="promotion">
+                <h5>新人专享特惠</h5>
+                <p>满100元送50元代金券</p>
+            </div>
+        </aside>
+    </main>
+</body>
+</html>
